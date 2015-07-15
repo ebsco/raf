@@ -2,10 +2,10 @@ define(function(require, exports, module) {
   var now = (function () {
     var loadTime
     , func = function () {
-      return Date.now() - loadTime
+      return new Date().getTime() - loadTime
     };
 
-    loadTime = Date.now()
+    loadTime = new Date().getTime()
     return func;
   })()
     , global = typeof window === 'undefined' ? {} : window
