@@ -1,0 +1,6 @@
+{
+	"name": "raf",
+	"description": "AMD fork of npm raf module.",
+	"main": "index.js",
+	"type": "amd"
+}
