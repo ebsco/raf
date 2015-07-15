@@ -1,12 +1,13 @@
 define(function(require, exports, module) {
   var now = (function () {
-    var loadTime = 0;
-
-    return function () {
-      Date.now() - loadTime
-      loadTime = Date.now()
+    var loadTime
+    , func = function () {
+      return Date.now() - loadTime
     };
-  })();
+
+    loadTime = Date.now()
+    return func;
+  })()
     , global = typeof window === 'undefined' ? {} : window
     , vendors = ['moz', 'webkit']
     , suffix = 'AnimationFrame'
